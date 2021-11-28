@@ -14,7 +14,7 @@ import "./App.css";
 import { ProvideAuth } from "navigation/Auth/ProvideAuth";
 // Redux
 import { Provider } from "react-redux";
-import {store} from "redux/store";
+import { store } from "redux/store";
 
 function App() {
   const [darkState, setDarkState] = useState(false);
@@ -32,7 +32,9 @@ function App() {
               darkState={darkState}
               handleThemeChange={handleThemeChange}
             />
+
             <ProvideAuth>
+
               <BrowserRouter>
                 <RouterConfig />
               </BrowserRouter>

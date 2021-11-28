@@ -1,0 +1,21 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+}
+
+* {
+  font-family: myFirstFont;
+}
+.posts-card-maping {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+.filter-posts-home {
+  width: 350px;
+}
+.home-page-wrapper {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 5fr;
+}
