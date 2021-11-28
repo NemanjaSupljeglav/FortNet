@@ -14,7 +14,7 @@ const HomeView = props => {
         <div>
             <Typography variant="h2">HomeView {props.title}</Typography>
             <LanguageSelection />
-            gdje sam
+
             <Button variant="contained" color="primary" onClick={() => goTo(DASHBOARD)}>Dashboard</Button>
         </div>
     )

@@ -8,9 +8,12 @@ import { useEffect } from "react";
 import Filter from "../../components/filter/Filter";
 import Search from "../../components/search/Search";
 import NextPage from "../../components/nextPage/NextPage"
+import 'bootstrap/dist/css/bootstrap.css';
+import Spinner from 'react-bootstrap/Spinner';
 export function HomeContainer() {
   const [post, setPost] = useState([]);
   const [postLoad, setPostLoad] = useState(false);
+  const [spinner, setSpinner] = useState(false);
   const [postType, setPostType] = useState("");
   const [pageNum, setPageNum] = useState(9);
   const [skipPage, setSkipPage] = useState(0);
@@ -26,6 +29,7 @@ export function HomeContainer() {
   console.log(search.target);
   console.log("search");
   const getPosts = async () => {
+    setSpinner(true)
     const res = await fetch(
       `https://api.fort-net.org/Objects?Text=${search}&ObjectType=${postType}&Skip=${skipPage}&Take=${pageNum}`
 
@@ -38,12 +42,16 @@ export function HomeContainer() {
 
     setPost(posts.result);
     setPostLoad(true);
+    setSpinner(false)
   };
   useEffect(() => {
     getPosts();
   }, [postType, search, skipPage]);
   return (
     <div>
+
+
+
       <NavLinks />
       <HomeView title="Home" />
       <div className="home-page-wrapper-all">
@@ -56,6 +64,7 @@ export function HomeContainer() {
           ></Filter>
 
           <div className="posts-card-maping">
+            {spinner && <Spinner animation="border" variant="primary" />}
             {post?.map((post) => {
               return (
                 <PostCard
