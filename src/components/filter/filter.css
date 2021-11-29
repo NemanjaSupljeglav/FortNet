@@ -14,9 +14,10 @@
   font-weight: bold;
   width: max-content;
   margin-left: 15px;
-  margin-bottom: -5px;
+  margin-bottom: 5px;
   cursor: pointer;
   color: rgb(71, 71, 71);
+  transition-duration: 0.3s;
 }
 .filter-object-type-select {
   padding: 12px 8px;
@@ -25,7 +26,7 @@
   font-weight: bold;
   width: max-content;
   margin-left: 15px;
-  margin-bottom: -5px;
+  margin-bottom: 5px;
   color: white;
   cursor: pointer;
   background: rgb(240, 122, 25);
@@ -36,7 +37,7 @@
 }
 .filter-title {
   margin-left: 15px;
-  margin-bottom: -5px;
+  margin-bottom: 5px;
   color: rgb(71, 71, 71);
 }
 .filter-object-type:hover {

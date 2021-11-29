@@ -17,5 +17,22 @@
 .home-page-wrapper {
   display: grid;
   grid-gap: 15px;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 5fr 2fr;
+}
+.spinner-home {
+  margin-left: 50%;
+  margin-right: 50%;
+  margin-top: 100px;
+}
+.search-home {
+  margin-left: 35px;
+}
+.wrapper-posts-search {
+  width: auto;
+}
+.home-map {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

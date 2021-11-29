@@ -1,5 +1,8 @@
-.page-num{
-    margin-left: 5px;
-    margin-right: 5px;
-    
+.page-num {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.NextPage-wrapeer {
+  position: fixed;
+  bottom: 0px;
 }

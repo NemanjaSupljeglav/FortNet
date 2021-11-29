@@ -7,9 +7,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Filter from "../../components/filter/Filter";
 import Search from "../../components/search/Search";
-import NextPage from "../../components/nextPage/NextPage"
-import 'bootstrap/dist/css/bootstrap.css';
-import Spinner from 'react-bootstrap/Spinner';
+import NextPage from "../../components/nextPage/NextPage";
+import "bootstrap/dist/css/bootstrap.css";
+import Spinner from "react-bootstrap/Spinner";
 export function HomeContainer() {
   const [post, setPost] = useState([]);
   const [postLoad, setPostLoad] = useState(false);
@@ -29,10 +29,9 @@ export function HomeContainer() {
   console.log(search.target);
   console.log("search");
   const getPosts = async () => {
-    setSpinner(true)
+    setSpinner(true);
     const res = await fetch(
       `https://api.fort-net.org/Objects?Text=${search}&ObjectType=${postType}&Skip=${skipPage}&Take=${pageNum}`
-
     );
     const posts = await res.json();
 
@@ -42,20 +41,17 @@ export function HomeContainer() {
 
     setPost(posts.result);
     setPostLoad(true);
-    setSpinner(false)
+    setSpinner(false);
   };
   useEffect(() => {
     getPosts();
   }, [postType, search, skipPage]);
   return (
     <div>
-
-
-
       <NavLinks />
       <HomeView title="Home" />
+
       <div className="home-page-wrapper-all">
-        <Search setSearch={setSearch}></Search>
         <div className="home-page-wrapper">
           <Filter
             className="filter-posts-home"
@@ -63,24 +59,32 @@ export function HomeContainer() {
             postType={postType}
           ></Filter>
 
-          <div className="posts-card-maping">
-            {spinner && <Spinner animation="border" variant="primary" />}
-            {post?.map((post) => {
-              return (
-                <PostCard
-                  key={post.id}
-                  postImages={post.photoUrl}
-                  objectType={post.objectType}
-                  name={post.name}
-                ></PostCard>
-              );
-            })}
+          <div className="wrapper-posts-search">
+            <Search setSearch={setSearch} className="search-home"></Search>
+            {spinner && <Spinner animation="border" className="spinner-home" />}
+            {!spinner && (
+              <div className="posts-card-maping">
+                {post?.map((post) => {
+                  return (
+                    <PostCard
+                      key={post.id}
+                      postImages={post.photoUrl}
+                      objectType={post.objectType}
+                      name={post.name}
+                    ></PostCard>
+                  );
+                })}
+              </div>
+            )}
           </div>
+          <div className="home-map">mapa ide ovde</div>
         </div>
-
-        <NextPage setPageNum={setPageNum} setSkipPage={setSkipPage} skipPage={skipPage}></NextPage>
       </div>
-
+      <NextPage
+        setPageNum={setPageNum}
+        setSkipPage={setSkipPage}
+        skipPage={skipPage}
+      ></NextPage>
     </div>
   );
 }
