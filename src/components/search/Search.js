@@ -5,6 +5,7 @@ function Search(props) {
   };
   return (
     <div className="Search-wrapper">
+      <div className="search-title">Search</div>
       <input
         type="text"
         className="Search-input"
