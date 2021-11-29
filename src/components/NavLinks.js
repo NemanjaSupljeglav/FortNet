@@ -1,7 +1,6 @@
 import React from "react";
 import { LinkRoute } from "./LinkRoute";
 import "./navLinks.css";
-import { useState } from "react";
 import {
   MAP,
   HOME,
@@ -23,9 +22,6 @@ const spanStylesSelect = {
 };
 
 export const NavLinks = () => {
-  console.log("window.location.pathname");
-  console.log(window.location.pathname);
-  console.log("window.location.pathname");
   const pathname = window.location.pathname;
 
   return (

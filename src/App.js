@@ -8,7 +8,6 @@ import { BrowserRouter } from "react-router-dom";
 import { RouterConfig } from "navigation/RouterConfig";
 // MUI Theme
 import { ThemeProvider, Button, createMuiTheme } from "@material-ui/core";
-import { ThemeSwitch } from "components/ThemeSwitch";
 import { dark, light } from "styles/muiTheme";
 import "./App.css";
 import { ProvideAuth } from "navigation/Auth/ProvideAuth";
@@ -18,28 +17,16 @@ import { store } from "redux/store";
 
 function App() {
   const [darkState, setDarkState] = useState(false);
-  const handleThemeChange = () => {
-    setDarkState(!darkState);
-    console.log("theme=", darkState ? "dark" : "light");
-  };
 
   return (
     <>
       <div>
         <Provider store={store}>
-          <ThemeProvider theme={darkState ? dark() : light()}>
-            <ThemeSwitch
-              darkState={darkState}
-              handleThemeChange={handleThemeChange}
-            />
-
-            <ProvideAuth>
-
-              <BrowserRouter>
-                <RouterConfig />
-              </BrowserRouter>
-            </ProvideAuth>
-          </ThemeProvider>
+          <ProvideAuth>
+            <BrowserRouter>
+              <RouterConfig />
+            </BrowserRouter>
+          </ProvideAuth>
         </Provider>
       </div>
     </>
