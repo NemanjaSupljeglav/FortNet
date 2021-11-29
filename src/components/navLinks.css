@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Nunito:wght@200&display=swap");
+* {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+.title-nav-bar {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+.wrapper-all-nav-links {
+  margin-left: 30%;
+  margin-right: 50%;
+  width: max-content;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.wrapper-all-nav-links .nav-bar-titles {
+  text-decoration: none;
+  font-style: none;
+  font-weight: bold;
+  font-style: none;
+  text-decoration: none;
+  color: red;
+}

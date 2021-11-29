@@ -1,11 +1,11 @@
 import React from "react";
 import { NavLinks } from "../../components/NavLinks";
 
-export function HomeContainer() {
+export function AboutProjectContainer() {
   return (
     <div>
       <NavLinks />
-      <div>Home page</div>
+      <div>About Project page</div>
     </div>
   );
 }

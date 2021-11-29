@@ -1,7 +1,8 @@
 import React from "react";
-import HomeView from "./HomeView";
-import { NavLinks } from "./components/NavLinks";
-import "./homePage.css";
+import { NavLinks } from "../../components/NavLinks";
+
+import { MapView } from "./MapView";
+import "./map.css";
 import PostCard from "../../components/postsCard/PostCard";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -10,7 +11,7 @@ import Search from "../../components/search/Search";
 import NextPage from "../../components/nextPage/NextPage";
 import "bootstrap/dist/css/bootstrap.css";
 import Spinner from "react-bootstrap/Spinner";
-export function HomeContainer() {
+export function MapContainer() {
   const [post, setPost] = useState([]);
   const [postLoad, setPostLoad] = useState(false);
   const [spinner, setSpinner] = useState(false);
@@ -49,8 +50,7 @@ export function HomeContainer() {
   return (
     <div>
       <NavLinks />
-      <HomeView title="Home" />
-
+      <MapView />
       <div className="home-page-wrapper-all">
         <div className="home-page-wrapper">
           <Filter

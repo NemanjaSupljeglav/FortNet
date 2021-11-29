@@ -2,7 +2,7 @@ import React from "react";
 import { ROOT } from "navigation/CONSTANTS";
 import { Typography } from "@material-ui/core";
 import { useAuth } from "navigation/Auth/ProvideAuth";
-import { NavLinks } from "../Home/components/NavLinks";
+import { NavLinks } from "../../components/NavLinks";
 
 export const AuthorizedPage1 = () => {
   const { user } = useAuth();

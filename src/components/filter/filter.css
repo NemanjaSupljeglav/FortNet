@@ -6,10 +6,14 @@
 .filter-wrapper {
   display: flex;
   flex-direction: column;
+  background: rgb(249, 249, 249);
+  margin-left: 15px;
+  border-radius: 5px;
+  padding-right: 10px;
 }
 .filter-object-type {
   padding: 12px 8px;
-  border: rgb(212, 212, 212) solid 3px;
+  border: rgb(185, 185, 185) solid 2px;
   border-radius: 5px;
   font-weight: bold;
   width: max-content;
@@ -41,5 +45,5 @@
   color: rgb(71, 71, 71);
 }
 .filter-object-type:hover {
-  border: rgb(100, 100, 100) solid 3px;
+  border: rgb(100, 100, 100) solid 2px;
 }

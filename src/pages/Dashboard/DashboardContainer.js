@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import { ROOT } from "navigation/CONSTANTS";
 import { UserList } from "./UserList";
 import { CircularProgress, Typography } from "@material-ui/core";
-import { NavLinks } from "../Home/components/NavLinks";
-
+import { NavLinks } from "../../components/NavLinks";
 import { getAllUsers } from "services";
 
 export const DashboardContainer = () => {

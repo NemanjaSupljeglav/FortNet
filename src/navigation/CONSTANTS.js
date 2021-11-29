@@ -1,6 +1,9 @@
 export const ROOT = "/";
-export const LOGIN = "/login";
-export const DASHBOARD = "/dashboard";
-export const PAGE1 = "/page1";
+
 export const AUTH_PAGE1 = "/authorized1";
-export const FRONT_PAGE = "/frontPage";
+
+export const HOME = "/";
+export const MAP = "/map";
+export const ATTRACTIONS = "/attractions";
+export const ABOUT_PROJECT = "/aboutProject";
+export const PRESS = "/press";

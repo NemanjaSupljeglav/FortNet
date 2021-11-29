@@ -1,0 +1,38 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+}
+
+* {
+  font-family: myFirstFont;
+}
+.posts-card-maping {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+.filter-posts-home {
+  width: 350px;
+}
+.home-page-wrapper {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1.1fr 5fr 2.5fr;
+}
+.spinner-home {
+  margin-left: 50%;
+  margin-right: 50%;
+  margin-top: 100px;
+}
+.search-home {
+  margin-left: 35px;
+}
+.wrapper-posts-search {
+  width: auto;
+}
+.home-map {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
