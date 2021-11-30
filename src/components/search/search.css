@@ -23,3 +23,8 @@
   top: -35px;
   left: -8px;
 }
+.Search-input:hover {
+  border-color: rgb(124, 124, 124);
+  border-left-color: rgb(199, 199, 199);
+  border-top-color: rgb(199, 199, 199);
+}

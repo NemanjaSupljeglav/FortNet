@@ -8,11 +8,12 @@
   font-family: "Nunito", sans-serif;
 }
 .wrapper-all-nav-links {
-  margin-left: 30%;
-  margin-right: 50%;
-  width: max-content;
+  width: 100%;
   margin-bottom: 50px;
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .wrapper-all-nav-links .nav-bar-titles {
   text-decoration: none;
@@ -21,4 +22,8 @@
   font-style: none;
   text-decoration: none;
   color: red;
+}
+.wrapper-all-nav-links.title-nav-bar :hover {
+  color: rgb(240, 122, 25);
+  background: red;
 }
