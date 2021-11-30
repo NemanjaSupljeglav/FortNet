@@ -36,36 +36,33 @@ export const NavLinks = () => {
           style={pathname === "/" ? spanStylesSelect : spanStyles}
           className="title-nav-bar"
         >
-          HOME
+          <p>{t("HOME.1")}</p>
         </LinkRoute>
         <LinkRoute
           to={MAP}
           style={pathname === "/map" ? spanStylesSelect : spanStyles}
         >
-          MAP
+          <p>{t("MAP.1")}</p>
         </LinkRoute>
         <LinkRoute
           to={ATTRACTIONS}
           style={pathname === "/attractions" ? spanStylesSelect : spanStyles}
         >
-          ATTRACTIONS
+          <p>{t("ATTRACTIONS.1")}</p>
         </LinkRoute>
         <LinkRoute
           to={ABOUT_PROJECT}
           style={pathname === "/aboutProject" ? spanStylesSelect : spanStyles}
         >
-          ABOUT PROJECT
+          <p>{t("ABOUT PROJECT.1")}</p>
         </LinkRoute>
         <LinkRoute
           to={PRESS}
           style={pathname === "/press" ? spanStylesSelect : spanStyles}
         >
-          PRESS
+          <p>{t("PRESS.1")}</p>
         </LinkRoute>
         <TranslationContainer></TranslationContainer>
-        <p>{t("Thanks.1")}</p>
-        <p>{t("Thanks.1")}</p>
-        <p>{t("Thanks.1")}</p>
       </div>
     </>
   );

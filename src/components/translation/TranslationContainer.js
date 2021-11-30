@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 //Trans
 import { useTranslation } from "react-i18next";
 function TranslationContainer() {
@@ -6,6 +6,7 @@ function TranslationContainer() {
   function handleClick(lang) {
     i18n.changeLanguage(lang);
   }
+
   return (
     <>
       <div>
@@ -13,8 +14,6 @@ function TranslationContainer() {
           <button onClick={() => handleClick("en")}>English</button>
           <button onClick={() => handleClick("cro")}>Hrvatski</button>
         </nav>
-        <p>{t("Thanks.1")}</p>
-        <p>{t("Why.1")}</p>
       </div>
     </>
   );
