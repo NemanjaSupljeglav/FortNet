@@ -1,6 +1,8 @@
 import React from "react";
 import { LinkRoute } from "./LinkRoute";
 import "./navLinks.css";
+import TranslationContainer from "../components/translation/TranslationContainer";
+import { useTranslation } from "react-i18next";
 import {
   MAP,
   HOME,
@@ -22,6 +24,7 @@ const spanStylesSelect = {
 };
 
 export const NavLinks = () => {
+  const { t } = useTranslation();
   const pathname = window.location.pathname;
 
   return (
@@ -59,6 +62,10 @@ export const NavLinks = () => {
         >
           PRESS
         </LinkRoute>
+        <TranslationContainer></TranslationContainer>
+        <p>{t("Thanks.1")}</p>
+        <p>{t("Thanks.1")}</p>
+        <p>{t("Thanks.1")}</p>
       </div>
     </>
   );
