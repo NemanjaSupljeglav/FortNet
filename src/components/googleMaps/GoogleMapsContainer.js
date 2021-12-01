@@ -13,14 +13,15 @@ const containerStyle = {
 };
 
 const center = {
-  lat: -3.745,
-  lng: -38.523,
+  lat: 43.343777,
+  lng: 17.807758,
+  zoom: 14,
 };
 
 function TranslationContainer() {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyCbfmajaJ2VokwIpeDcTZmSx_0dbookIUU",
+    googleMapsApiKey: "AIzaSyAD9BnG-MvxatROXPl1JFhF9O0ztnv_Hbg",
   });
 
   const [map, setMap] = React.useState(null);
@@ -41,7 +42,7 @@ function TranslationContainer() {
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={center}
-          zoom={10}
+          zoom={center.zoom}
           onLoad={onLoad}
           onUnmount={onUnmount}
         >
