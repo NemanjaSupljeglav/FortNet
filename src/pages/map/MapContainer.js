@@ -11,6 +11,8 @@ import Search from "../../components/search/Search";
 import NextPage from "../../components/nextPage/NextPage";
 import "bootstrap/dist/css/bootstrap.css";
 import Spinner from "react-bootstrap/Spinner";
+import GoogleMapsContainer from "../../components/googleMaps/GoogleMapsContainer";
+
 export function MapContainer() {
   const [post, setPost] = useState([]);
   const [postLoad, setPostLoad] = useState(false);
@@ -77,7 +79,9 @@ export function MapContainer() {
               </div>
             )}
           </div>
-          <div className="home-map">mapa ide ovde</div>
+          <div className="home-map">
+            <GoogleMapsContainer></GoogleMapsContainer>
+          </div>
         </div>
       </div>
       <NextPage

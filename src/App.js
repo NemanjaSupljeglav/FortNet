@@ -7,7 +7,6 @@ import "fontsource-roboto";
 import { BrowserRouter } from "react-router-dom";
 import { RouterConfig } from "navigation/RouterConfig";
 
-import "./App.css";
 import { ProvideAuth } from "navigation/Auth/ProvideAuth";
 // Redux
 import { Provider } from "react-redux";
