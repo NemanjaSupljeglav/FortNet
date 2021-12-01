@@ -1,0 +1,34 @@
+.wrapper-all-translation {
+  margin-bottom: 17px;
+  width: 300px;
+  margin-right: 10%;
+}
+
+.button-translation {
+  margin-right: 15px;
+  padding: 6px 18px;
+  border-radius: 8px;
+  background: white;
+  font-weight: bold;
+  border-style: solid;
+  transition-duration: 0.2s;
+}
+
+.button-translation:hover {
+  margin-right: 15px;
+  padding: 6px 18px;
+  border-radius: 8px;
+  background: white;
+  color: #f07a19;
+  border-color: #f07a19;
+  border-style: solid;
+}
+.button-translation-select {
+  margin-right: 15px;
+  padding: 6px 18px;
+  border-radius: 8px;
+  background: white;
+  font-weight: bold;
+  border-style: solid;
+  border-color: #f07a19;
+}

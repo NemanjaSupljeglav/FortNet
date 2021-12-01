@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import "./translation.css";
 //Trans
 import { useTranslation } from "react-i18next";
 function TranslationContainer() {
@@ -10,9 +11,27 @@ function TranslationContainer() {
   return (
     <>
       <div>
-        <nav>
-          <button onClick={() => handleClick("en")}>English</button>
-          <button onClick={() => handleClick("cro")}>Hrvatski</button>
+        <nav className="wrapper-all-translation">
+          <button
+            onClick={() => handleClick("en")}
+            className={
+              t("HOME.1") === "HOME"
+                ? "button-translation-select"
+                : "button-translation"
+            }
+          >
+            English
+          </button>
+          <button
+            onClick={() => handleClick("cro")}
+            className={
+              t("HOME.1") === "NASLOVNA"
+                ? "button-translation-select"
+                : "button-translation"
+            }
+          >
+            Hrvatski
+          </button>
         </nav>
       </div>
     </>

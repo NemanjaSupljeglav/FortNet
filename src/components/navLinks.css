@@ -9,8 +9,8 @@
 }
 .wrapper-all-nav-links {
   width: 100%;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin-bottom: 110px;
+  margin-top: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,4 +26,22 @@
 .wrapper-all-nav-links.title-nav-bar :hover {
   color: rgb(240, 122, 25);
   background: red;
+}
+
+.wrapper-route {
+  margin-left: auto;
+  margin-right: auto;
+}
+.title-nav-bar:hover {
+  color: rgb(240, 122, 25);
+}
+.title-nav-bar {
+  background: red;
+  color: rgb(91, 76, 67);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 950;
+}
+.title-nav-bar-select {
+  color: rgb(240, 122, 25);
 }
