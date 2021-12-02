@@ -24,6 +24,7 @@ export function HomeContainer() {
         animationType="fadeout"
         disableButtonsControls={true}
         disableDotsControls={true}
+        className
       >
         <img src={Bannner1} className="sliderimg" />
         <img src={Bannner2} className="sliderimg" />
