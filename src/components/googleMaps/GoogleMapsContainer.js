@@ -61,7 +61,7 @@ function TranslationContainer() {
               position={{ lat: 43.343777, lng: 17.807758 }}
               icon="./logotitle.png"
               className="icon-react"
-              title="Hello Nemanja!"
+              title="Hello Nemanja kralju!"
               content='<div id="foo">Nemanjaaaa</div>'
               id={1}
               onClick={(id) => setPopUp(id)}
