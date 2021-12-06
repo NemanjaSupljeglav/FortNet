@@ -8,10 +8,11 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Filter from "../../components/filter/Filter";
 import Search from "../../components/search/Search";
-import NextPage from "../../components/nextPage/NextPage";
 import "bootstrap/dist/css/bootstrap.css";
 import Spinner from "react-bootstrap/Spinner";
 import GoogleMapsContainer from "../../components/googleMaps/GoogleMapsContainer";
+import Paginate from "../../components/paginate/Paginate";
+import ReactPaginate from "react-paginate";
 
 export function MapContainer() {
   const [post, setPost] = useState([]);
@@ -84,11 +85,8 @@ export function MapContainer() {
           </div>
         </div>
       </div>
-      <NextPage
-        setPageNum={setPageNum}
-        setSkipPage={setSkipPage}
-        skipPage={skipPage}
-      ></NextPage>
+
+      <Paginate setSkipPage={setSkipPage}></Paginate>
     </div>
   );
 }

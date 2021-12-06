@@ -1,15 +1,20 @@
 import React from "react";
 import "./googleMaps.css";
-import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  useJsApiLoader,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
 import { useState } from "react";
 
 const containerStyle = {
   width: "100%",
-  height: "1000px",
+  height: "1070px",
   marginRight: "15px",
   marginLeft: "5px",
   position: "sticky",
-  top: "-70px",
+  top: "-50px",
   borderRadius: "5px",
 };
 
@@ -21,9 +26,7 @@ function TranslationContainer() {
 
   const [zoomMap, setZoomMap] = useState(1);
   const [popUp, setPopUp] = useState();
-  console.log(popUp);
-  console.log(popUp);
-  console.log(popUp);
+  const [selectedCenter, setSelectedCenter] = useState(null);
   setInterval(() => {
     setZoomMap(2);
   }, 10);
@@ -64,36 +67,23 @@ function TranslationContainer() {
               title="Hello Nemanja kralju!"
               content='<div id="foo">Nemanjaaaa</div>'
               id={1}
-              onClick={(id) => setPopUp(id)}
+              onClick={() => {
+                setSelectedCenter(1);
+              }}
             />
           )}
-          {true && (
-            <Marker
-              position={{ lat: 43.398777, lng: 17.807758 }}
-              icon="./logotitle.png"
-              id={2}
-            />
-          )}
-          {true && (
-            <Marker
-              position={{ lat: 43.318777, lng: 17.802758 }}
-              icon="./logotitle.png"
-              id={3}
-            />
-          )}
-          {true && (
-            <Marker
-              position={{ lat: 43.418777, lng: 17.902758 }}
-              icon="./logotitle.png"
-              id={4}
-            />
-          )}
-          {true && (
-            <Marker
-              position={{ lat: 43.618777, lng: 17.302758 }}
-              icon="./logotitle.png"
-              id={5}
-            />
+          {selectedCenter && (
+            <InfoWindow
+              onCloseClick={() => {
+                setSelectedCenter(null);
+              }}
+              position={{
+                lat: 43.343777,
+                lng: 17.807758,
+              }}
+            >
+              <div className="popup-test">hello nemanja poopup</div>
+            </InfoWindow>
           )}
         </GoogleMap>
       ) : (
