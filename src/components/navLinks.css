@@ -45,3 +45,22 @@
 .title-nav-bar-select {
   color: rgb(240, 122, 25);
 }
+
+.icon-navbar {
+  color: rgb(194, 194, 194);
+}
+
+.dropdown-attractions-actionsb {
+  position: relative;
+  left: 15px;
+  height: min-content;
+  color: red;
+}
+.dropdown-attractions {
+  position: absolute;
+  top: 125px;
+  font-size: 15px;
+}
+.dropdown-attractions-actions:hover {
+  color: rgb(240, 122, 25);
+}

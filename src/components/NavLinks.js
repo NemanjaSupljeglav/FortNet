@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { LinkRoute } from "./LinkRoute";
 import "./navLinks.css";
 import TranslationContainer from "../components/translation/TranslationContainer";
 import Logo from "./logo/Logo";
 import { useTranslation } from "react-i18next";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import {
   MAP,
   HOME,
@@ -27,7 +28,8 @@ const spanStylesSelect = {
 export const NavLinks = () => {
   const { t } = useTranslation();
   const pathname = window.location.pathname;
-
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [showDropdownPress, setShowDropdownPress] = useState(false);
   return (
     <>
       {/* Common component created for all Link tags to be used. Thus, avoiding reputation of any styling and universal reuse */}
@@ -49,8 +51,31 @@ export const NavLinks = () => {
           <LinkRoute
             to={ATTRACTIONS}
             style={pathname === "/attractions" ? spanStylesSelect : spanStyles}
+            className="attractionas-nav-link"
+            onMouseLeave={() => setShowDropdown(false)}
+            onMouseOver={() => setShowDropdown(true)}
           >
-            <p>{t("ATTRACTIONS.1")}</p>
+            {showDropdown && (
+              <p show={showDropdown} className="dropdown-attractions">
+                <p href="#/action-1" className="dropdown-attractions-actions">
+                  BAŠTINA
+                </p>
+                <p href="#/action-2" className="dropdown-attractions-actions">
+                  ENO GASTRO
+                </p>
+                <p href="#/action-3" className="dropdown-attractions-actions">
+                  SMJEŠTAJ
+                </p>
+                <p href="#/action-4" className="dropdown-attractions-actions">
+                  AKTIVNI ODMOR
+                </p>
+              </p>
+            )}
+
+            <p>
+              {t("ATTRACTIONS.1")}
+              <KeyboardArrowDownIcon className="icon-navbar"></KeyboardArrowDownIcon>
+            </p>
           </LinkRoute>
           <LinkRoute
             to={ABOUT_PROJECT}
@@ -61,8 +86,23 @@ export const NavLinks = () => {
           <LinkRoute
             to={PRESS}
             style={pathname === "/press" ? spanStylesSelect : spanStyles}
+            onMouseLeave={() => setShowDropdownPress(false)}
+            onMouseOver={() => setShowDropdownPress(true)}
           >
-            <p>{t("PRESS.1")}</p>
+            <p>
+              {showDropdownPress && (
+                <p show={showDropdown} className="dropdown-attractions">
+                  <p href="#/action-1" className="dropdown-attractions-actions">
+                    NOVOSTI
+                  </p>
+                  <p href="#/action-2" className="dropdown-attractions-actions">
+                    MULTIMEDIJA
+                  </p>
+                </p>
+              )}
+              {t("PRESS.1")}{" "}
+              <KeyboardArrowDownIcon className="icon-navbar"></KeyboardArrowDownIcon>
+            </p>
           </LinkRoute>
         </div>
         <TranslationContainer className="nav-bar-translation-button"></TranslationContainer>
