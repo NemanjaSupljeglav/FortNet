@@ -15,7 +15,7 @@ import { Page1 } from "pages/Page1";
 import Login from "./Auth/Login";
 import { AuthorizedPage1 } from "pages/AuthorizedPage1";
 import PrivateRoute from "./Auth/PrivateRoute";
-import { MapContainer } from "../../src/pages/map/MapContainer";
+import { MapContainer } from "../pages/Map/MapContainer";
 import { AttractinosContainer } from "pages/Attractions/AttractionsContainer";
 import { AboutProjectContainer } from "pages/AboutProject/AboutProjectContainer";
 import { PressContainer } from "pages/Press/PressContainer";
